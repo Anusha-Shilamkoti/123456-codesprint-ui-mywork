@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>PERSONAL FITNESS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+     function cal() {
+                document.getElementById('inr').innerHTML = 500;
+                document.getElementById('paisa').innerHTML=00;
+              }
+              function cacl() {
+                document.getElementById('inr').innerHTML = 1600;
+                document.getElementById('paisa').innerHTML=00;
+              }
+              function caclcu() {
+                document.getElementById('inr').innerHTML = 3600;
+                document.getElementById('paisa').innerHTML=00;
+              }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+     <div class="col-lg-2"></div>
+     <div class="col-lg-8"><div class="jumbotron">
+      <h2 style="text-align: center;">Place Fitness Trainer Appointment</h2><br>
+      <form>
+        <div class="row">
+          <div class="col-lg-6">   
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="name" class="form-control" pattern="[a-zA-Z]+" id="fName" placeholder="Enter First Name" autofocus required>
+        </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" class="form-control" id="lName" pattern="[a-zA-Z]+" placeholder="Enter password" name="pwd" required>
+          </div>
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4">  
+        <label>Date Of Birth :</label>
+            <input type="date" class="form-control" id="pwd" placeholder="Select Date of Birth" name="dob" required></div>
+          <div class="col-lg-4"> 
+            <label>Email :</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter Email" required>
+            </div>
+            <div class="col-lg-4">
+              <label>Contact Number :</label>
+              <input type="tel" name="phone" class="form-control" id="phone" placeholder="Enter Contact Number" pattern="[0-9]+" required maxlength="10" minlength="10">
+            </div>
+            
+            </div>
+            <br>
+            <div class="row">
+              <label>Address :</label>
+             
+              <input type="text" class="form-control" id="street" placeholder="Enter Stree Address" name="street" required>
+              <br><label>Street Address</label>
+              <div class="row">
+                <div class="col-lg-4">
+                  <input type="text" class="form-control" id="city" pattern="[a-zA-Z]+" placeholder="Enter City" name="city" required>
+                  <label>City</label>
+          
+                  </div>
+                  <div class="col-lg-4">
+                    <input type="text" class="form-control" pattern="[a-zA-Z]+" id="State" placeholder="Enter State" name="state" required>
+                    <label>State</label>
+                    </div>
+                    <div class="col-lg-4">
+
+                      <select class="form-control" id="sel1">
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>UK</option>
+                        <option>Europe</option>
+                      </select>
+                      <label>City</label>
+                </div> 
+                <div class="row">
+                  <div class="col-lg-4">
+                <input type="number" class="form-control" pattern="[0-9]+" id="pin" placeholder="Enter Pincode" minlength="6" maxlength="6">
+                <label>Pincode</label>
+              </div>
+              </div>
+            </div>
+        
+          <label>Trainer Preference :</label>
+          <div class="radio">
+            <label><input type="radio" name="optradio" checked>Male Trainer</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">Female Trainer</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio">No Preference</label>
+          </div>
+          <div class="radio">
+            <div class="row">
+              <div class="col-lg-4">
+            <label class="radio-inline"><input type="radio" name="optradio" onclick="myFunction()">Trainer Name : </label><input type="text" id="tname" class="form-control" placeholder="Enter Trainer Name">
+            </div></div>
+            <script>
+              function myFunction() {
+                var x = document.getElementById("tname");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                } else {
+                  x.style.display = "none";
+                }
+              }
+              </script>
+           
+          </div>
+          <div class="radio">
+            <div class="row">
+              <div class="col-lg-4">
+            <label><input type="radio" name="optradio" onclick="otherFunction()">Others</label><input type="text" id="others" class="form-control" placeholder="Other Trainers">
+            </div></div>
+            <script>
+              function otherFunction() {
+                var x = document.getElementById("others");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                } else {
+                  x.style.display = "none";
+                }
+              }
+              </script>
+          </div>
+          <label>Do you need physiotherapist</label><br>
+          <label class="radio-inline">
+            <input type="radio" name="optradio" checked>Yes
+          </label>
+          <label class="radio-inline">
+            <input type="radio" name="optradio">No
+          </label>
+<br>
+          <br><label>Appointment: (Free)</label>
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Day</th>
+                <th>7am to 9am</th>
+                <th>9am to 11am</th>
+                <th>11am to 1pm</th>
+                <th>1pm to 3pm</th>
+                <th>3pm to 5pm</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Monday</th>
+                <td><input type="radio" name="Monday"> 1</td>
+                <td><input type="radio" name="Monday"> 2</td>
+                <td><input type="radio" name="Monday"> 3</td>
+                <td><input type="radio" name="Monday"> 4</td>
+                <td><input type="radio" name="Monday"> 5</td>
+              </tr>
+              <tr>
+                <th>Tuesday</th>
+                <td><input type="radio" name="Tuesday"> 1</td>
+                <td><input type="radio" name="Tuesday"> 2</td>
+                <td><input type="radio" name="Tuesday"> 3</td>
+                <td><input type="radio" name="Tuesday"> 4</td>
+                <td><input type="radio" name="Tuesday"> 5</td>
+              </tr>
+              <tr>
+                <th>Wednesday</th>
+                <td><input type="radio" name="Wednesday"> 1</td>
+                <td><input type="radio" name="Wednesday"> 2</td>
+                <td><input type="radio" name="Wednesday"> 3</td>
+                <td><input type="radio" name="Wednesday"> 4</td>
+                <td><input type="radio" name="Wednesday"> 5</td>
+              </tr>
+              <tr>
+                <th>Thrusday</th>
+                <td><input type="radio" name="Thrusday">1</td>
+                <td><input type="radio" name="Thrusday">2</td>
+                <td><input type="radio" name="Thrusday">3</td>
+                <td><input type="radio" name="Thrusday">4</td>
+                <td><input type="radio" name="Thrusday">5</td>
+              </tr>
+              <tr>
+                <th>Friday</th>
+                <td><input type="radio" name="Friday">1</td>
+                <td><input type="radio" name="Friday">2</td>
+                <td><input type="radio" name="Friday">3</td>
+                <td><input type="radio" name="Friday">4</td>
+                <td><input type="radio" name="Friday">5</td>
+              </tr>
+              <tr>
+                <th>Saturday</th>
+                <td><input type="radio" name="Saturday">1</td>
+                <td><input type="radio" name="Saturday">2</td>
+                <td><input type="radio" name="Saturday">3</td>
+                <td><input type="radio" name="Saturday">4</td>
+                <td><input type="radio" name="Saturday">5</td>
+              </tr>
+              <tr>
+                <th>Sunday</th>
+                <td><input type="radio" name="sanday">1</td>
+                <td><input type="radio" name="sanday">2</td>
+                <td><input type="radio" name="sanday">3</td>
+                <td><input type="radio" name="sanday">4</td>
+                <td><input type="radio" name="sanday">5</td>
+              </tr>
+            </tbody>
+          </table>
+          <label>Select Package :</label>
+          <div class="radio">
+            <label><input type="radio" name="optradio" onclick="cal()">One time Assesment only (INR 500)</label>
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio" onclick="calc()">4 Weekly Sessions (INR 400/session)</label>
+            
+          </div>
+          <div class="radio">
+            <label><input type="radio" name="optradio" onclick="calcu()">12 Weekly Sessions (INR 300/session)</label>
+           
+          </div>
+          <div class="radio">
+            <div class="row">
+              <div class="col-lg-8">
+            <label class="radio-inline"><input type="radio" name="optradio" onclick="myFun()">Others : </label><div id="oth"><input type="text" id="other" class="form-control" placeholder="Enter Trainer Name"><label>Quote will be shared on phone call</label></div>
+            </div></div>
+            <script>
+              function myFun() {
+                var x = document.getElementById("oth");
+                if (x.style.display === "none") {
+                  x.style.display = "block";
+                } else {
+                  x.style.display = "none";
+                }
+              }
+              </script>
+           
+          </div>
+          </div>
+          <label>Quote</label>
+          <div class="row">
+            <div class="col-lg-3">   
+          <div class="form-group">
+            
+            <input type="text" class="form-control" id="inr">
+            <label>INR</label>
+          </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="form-group">
+              
+              <input type="text" class="form-control" id="paisa">
+            
+              <label>Paisa</label></div>
+          </div>
+          </div>
+          
+        
+          
+          <button type="submit" class="btn btn-default">Submit</button>
+
+
+    </div>
+
+    
+      </form>
+     </div></div>
+      <div class="col-lg-2"></div>
+    </div>
+    
+      </div>
+      
+</body>
+</html>
